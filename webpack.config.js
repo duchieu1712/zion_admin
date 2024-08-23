@@ -122,7 +122,7 @@ module.exports = (env, argv) => {
       },
       alias: {
         "@": path.resolve(__dirname, "./src"),
-        // "nemo-aa": "node_modules/nemo-aa",
+        "nemo-aa": "node_modules/nemo-aa",
       },
       fallback: {
         // vm: false,
