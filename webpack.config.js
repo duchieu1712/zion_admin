@@ -13,7 +13,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = (env, argv) => {
-  console.log("hehehehehehe", env, argv);
+  // console.log("hehehehehehe", env, argv);
   const isProduction = argv.mode === "production";
   /** @type {import('webpack').Configuration} **/
   const webpackConfig = {
@@ -122,6 +122,7 @@ module.exports = (env, argv) => {
       },
       alias: {
         "@": path.resolve(__dirname, "./src"),
+        // "nemo-aa": "node_modules/nemo-aa",
       },
       fallback: {
         // vm: false,

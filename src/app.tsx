@@ -3,7 +3,7 @@ import "./global.css";
 import ReduxProvider from "./modules/provider";
 import Router from "./routes/sections";
 import ThemeProvider from "./theme";
-import { WagmiConfig } from "wagmi";
+import { WagmiProvider } from "wagmi";
 import { configWagmi } from "./config/wagmi";
 import { useScrollToTop } from "./hooks/use-scroll-to-top";
 
@@ -17,9 +17,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <ReduxProvider>
-        <WagmiConfig config={configWagmi}>
+        <WagmiProvider  config={configWagmi}>
           <Router />
-        </WagmiConfig>
+        </WagmiProvider>
       </ReduxProvider>
     </ThemeProvider>
   );

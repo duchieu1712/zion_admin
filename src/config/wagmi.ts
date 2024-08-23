@@ -1,52 +1,50 @@
 // import { avalanche, bsc, mainnet, polygon, goerli } from 'wagmi/chains'
-import { avalanche, avalancheFuji, bsc, bscTestnet, mainnet } from "wagmi/chains";
-import { configureChains, createConfig } from "wagmi";
 
-import { INFURA_ID } from "../common/constants";
-import { InjectedConnector } from "wagmi/connectors/injected";
-import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
-import { WalletConnectLegacyConnector } from "@wagmi/core/connectors/walletConnectLegacy";
-import { infuraProvider } from "@wagmi/core/providers/infura";
-import { publicProvider } from "wagmi/providers/public";
+import { avalanche, avalancheFuji, bsc, bscTestnet, mainnet } from "@wagmi/core/chains";
+import { createConfig, http } from "@wagmi/core";
+import { injected, metaMask, walletConnect } from "@wagmi/connectors";
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, avalanche, avalancheFuji, bsc, bscTestnet],
-  [infuraProvider({ apiKey: INFURA_ID }), publicProvider()],
-);
+import { INFURA_ID } from "@/common/constants";
+import { createClient } from "viem";
+
+// import { INFURA_ID } from "../common/constants";
+
+
+// import { infuraProvider } from "wagmi/providers/infura";
+// import { publicProvider } from "wagmi/providers/public";
+
+
+
+// const { chains, publicClient, webSocketPublicClient } = configureChains(
+//   [mainnet, avalanche, avalancheFuji, bsc, bscTestnet],
+//   [infuraProvider({ apiKey: INFURA_ID }), publicProvider()],
+// );
 
 // Set up wagmi config
+
+const walletConnector = walletConnect({
+  projectId: process.env.WALLET_CONNECTION_PROJECTID as string,
+  showQrModal: true,
+});
+
+const metamaskConnector = metaMask({
+  infuraAPIKey: INFURA_ID,
+  injectProvider: true,
+});
+
+const injectedConnector = injected({
+  shimDisconnect: true,
+  target: "metaMask",
+  unstable_shimAsyncInject:true
+});
+
 export const configWagmi = createConfig({
-  autoConnect: false,
-  connectors: [
-    new MetaMaskConnector({
-      chains,
-      options: {
-        shimDisconnect: true,
-        UNSTABLE_shimOnConnectSelectAccount: true,
-      },
-    }),
-    new InjectedConnector({
-      chains,
-      options: {
-        name: "Injected",
-        shimDisconnect: true,
-      },
-    }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        projectId: process.env.WALLET_CONNECTION_PROJECTID,
-        showQrModal: true,
-      },
-    }),
-    new WalletConnectLegacyConnector({
-      chains,
-      options: {
-        qrcode: true,
-      },
-    }),
-  ],
-  publicClient,
-  webSocketPublicClient,
+  chains: [mainnet, avalanche, avalancheFuji, bsc, bscTestnet],
+  ssr: true,
+  client({ chain }) {
+    return createClient({ chain, transport: http() });
+  },
+  connectors: [metamaskConnector, injectedConnector, walletConnector],
+  // publicClient,
+  // webSocketPublicClient,
 });
