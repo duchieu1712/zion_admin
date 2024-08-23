@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "abi.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/app.ts --lib",
+    "type-check": "tsc --pretty --noEmit",
+    "format:check": "prettier --write '*/**/*.{js,ts}'",
+    "format:write": "prettier --write '*/**/*.{js,ts}'",
+    "lint": "eslint '*/**/*.{js,ts}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "axios": "^0.27.2",
+    "ethers": "^5.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "prettier": "2.6.2"
+  }
+}

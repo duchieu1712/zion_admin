@@ -1,0 +1,1 @@
+[{"jsonrpc":"2.0","id": 1, "method":"__NAMESPACE__.get_balance","params":[__SIG__]},{"jsonrpc":"2.0","id": 1, "method":"__NAMESPACE__.get_transactions","params":[__SIG__]},{"jsonrpc":"2.0","id":1,"method":"__NAMESPACE__.request_withdraw","params":[__SIG__,100]}]

@@ -1,0 +1,35 @@
+{
+    "data":{
+        "name":"4th Best Horse",
+        "description": "This is one of the four best horses __RAND__",
+        "image":"https://cloud.gsscorp.vn/f/4ca873cc89d24302ab6d/?dl=1",
+        "attributes":[
+            {
+                "trait_type":"class",
+                "value":"Best Horse"
+            },
+            {
+                "display_type":"number",
+                "trait_type":"Health",
+                "value":16000
+            },
+            {
+                "display_type":"number",
+                "trait_type": "Evasion",
+                "value": 800
+            },
+            {
+                "display_type":"number",
+                "trait_type":"Killer Speed",
+                "value": 1500
+            },
+            {
+                "display_type":"boost_number",
+                "trait_type":"Boost %",
+                "value": 0.35
+            }
+        ]
+    },
+    "recipient": "0xE55d2f58cC17aC7D9Ed2A646976D06C4d55691eB",
+    "callback": "http://gameserver.localhost:8080/callback/v1/nft?gamserver_id=1&user_id=7"
+}

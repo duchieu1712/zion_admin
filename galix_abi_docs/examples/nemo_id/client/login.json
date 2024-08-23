@@ -1,0 +1,1 @@
+{"jsonrpc":"2.0","id":1,"method":"nemo_id.user_login","params":[{"email":"linh.nguyenvan@gihot.vn","password":"Gihot@12345"}]}

@@ -1,0 +1,71 @@
+export const PROD = process.env.NODE_ENV === "production";
+export const isBrowser = typeof window !== "undefined";
+export const INFURA_ID = "252d1fead70442cba87431e2ce5cdf65";
+export const DEFAULT_CHAINID = PROD ? 176923 : 176923;
+export const CHAINID_ETH_AA = PROD ? 176923 : 176923;
+export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
+export const MARKET_OFFER_ENABLED = true;
+export const RELOAD_DELAY = 45 * 1000; //TODO: 45s
+export const TIME_BLOCK_METAMASK = 300;
+export const DEFAULT_MAX_VALUE_FILTER = 1000000000;
+export const DEFAULT_MAX_VALUE_FILTER_DASHBOARD = 1000000000;
+export const LINK_PANCAKE_NEMO = "https://nemoverse.io/";
+// export const LINK_PANCAKE_NEMO = 'https://testnet.nemoverse.io/'
+export const LINK_PANCAKE_GALIX = "https://test.hurricaneswap.com/#/swap";
+export const STATUS_AVAILABLE_NFT = 3;
+export const LOCALE_STORAGE_FILTER_MARKET = "filter-market";
+export const LOCALE_STORAGE_FILTER_STAKED = "filter-staked";
+export const DEFAULT_NUM_NFT_FILTER_BY_NAME = 999;
+export const API_KEY = "yYpMfsQt5BUB857umEdZ8z";
+export const BEAR_TOKEN_CLAIM = "webcogireferralAbN75o7UQSMqT7T";
+export const BEAR_TOKEN_REFERRAL = "webcogireferralAbN75o7UQSMqT7T";
+export const TIME_OTP = 180;
+export const LINK_SHARE_FB = "https://www.facebook.com/sharer/sharer.php?u=";
+export const LINK_SHARE_TWITTER = "http://www.twitter.com/share?url=";
+export const SIZE_PAGE_LOTTERY = 10;
+export const SIZE_TOTAL_LOTTERY = 1000;
+export const MIN_RANDOM_LOTTERY = 0;
+export const MAX_RANDOM_LOTTERY = 99999;
+export const PERCENT_AFTER_BURN = 85;
+export const MAX_TICKET_LOTTERY = 100;
+export const RESPONSE_STATUS_ERRRO = 500;
+export const RESPONSE_STATUS_SUCCESS = 1;
+export const IMAGE_COGI = "https://cloud.gsscorp.vn/f/8f625bafae644bada448/?dl=1";
+export const IMAGE_COD = "https://cloud.gsscorp.vn/f/b8fb8a669f294e99b037/?dl=1";
+export const PUBLIC_KEY =
+  "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAznURZcvuyMtuX2Rt6zo4+1twP/01l+9glSQvfaqmyxxnt9mxSoNEYeOdmE6szInJi1q8hFCc1QZgNgUqt/7vaFq57BpcmKFPASYkJFPooaPPLnWk7FIIZd4wKD6I+SIxOqUVUPMxQGznKtGwXmDA3uNUsXn14sYs5O+GLh/Vv+ziLFMgBiHQFV68XQqdwoQrXmA7o1EeWCnq9NVfc9vDTJYdCNF5Bl4PZXBNd2KxGZtHh1/puLNQMgFN6zemCa643iZtFthUF7AWQC4qjc92KhM3pb1BON/xBVKu/r82HI0g1vpW04Yn6jlyY/PRbReD+djZuTmlvBIaSLB+5v+a2QIDAQAB";
+export const SECRET_KEY = "yYpMfsQt5BUB857umEdZ";
+export const CANVAS_WIDTH = 328;
+export const CANVAS_HEIGHT = 328;
+export const CANVAS_WIDTH_DETAIL = 600;
+export const CANVAS_HEIGHT_DETAIL = 600;
+export const CANVAS_FLAG_WIDTH_DETAIL = 960;
+export const CANVAS_FLAG_HEIGHT_DETAIL = 576;
+export const RATIO_MINI_MAP = 5;
+export const GALIX_PRICE = 100;
+export const NEMO_PRICE = 1;
+export const LINK_ACCOUNT = PROD
+  ? "https://marketplace.galixcity.io/?t=account&refer_id="
+  : "https://test-market.galixcity.io/?t=account&refer_id=";
+export const KEY_BAMS = "626fbc4008d1c1bef2a73c58247396fa195f284adddf301e8bd8dc4fec910aca";
+export const LINK_SUPPORT = "https://galixcity.freshdesk.com/";
+export const LINK_P2P = PROD ? "https://nemoverse.io/" : "https://testnet.nemoverse.io/";
+export const LINK_BUY_USDT = "https://wiki.galixcity.io/vi/how-to-buy-usdt";
+export const LINK_CREATE_METAMASK = "https://wiki.galixcity.io/vi/create-and-link-metamask-wallet";
+export const LINK_TRANSFER = "https://wiki.galixcity.io/vi/transfer-usdt-to-avaxc-network";
+export const LINK_SWAP_NEMO = "https://wiki.galixcity.io/vi/swap-usdt-to-nemo";
+export const ENDPOINT_RPC = PROD ? "/nemo-wallet/" : "/nemo-wallet-testnet/";
+export const URI_DIRECT = "";
+export const LINK_PANCAKE_COGI =
+  "https://pancakeswap.finance/swap?outputCurrency=0x6cb755c4b82e11e727c05f697c790fdbc4253957";
+export const TIME_SLEEP = 25 * 1000;
+export const WEB_VERSION = "1.0.0";
+export const QUERY_DEFAULT_STATE_GID = "back_sign_up";
+export const MAX_GAS_FEE = 0;
+export const LINK_WALLET = "https://nemoverse.io";
+export const MAX_BIG = "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+export const TIME_START_STAKING = 1673237460;
+export const ERROR_CODE_NOT_TIME_SIGNATURE = 4100;
+export const ERROR_MESSSAGE_NOT_TIME_SIGNATURE = "access_signature expired";
+export const TIME_STEP = 1000 * 20;
+export const MAX_STEP_WITHDRAW = 8;
